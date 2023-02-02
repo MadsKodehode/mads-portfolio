@@ -7,6 +7,8 @@
   overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
+  /* Homepage */
+
   .App {
     overflow: hidden;
   }
@@ -107,5 +109,54 @@
     text-align: center;
     font-size: 25px;
     margin-top: 200px;
+  }
+
+  /* Homepage end */
+
+  /* Languages */
+  .languages {
+    font-family: "Inter";
+    text-align: center;
+    height: 100vh;
+    background-image: url("../imgs/bg-img.svg");
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+  }
+
+  .exp-header {
+    font-size: 48px;
+    margin-top: 50px;
+  }
+
+  .language-exp {
+    margin-top: 30px;
+  }
+  .language {
+    padding-block: 25px;
+    font-size: 40px;
+  }
+  .front-exp {
+    margin-top: 15px;
+  }
+  .front-header {
+    font-size: 40px;
+    padding-block: 25px;
+  }
+
+  .exp-logo {
+    padding: 0 10px 0 10px;
+  }
+  .back-exp {
+    margin-top: 15px;
+  }
+  .back-header {
+    font-size: 40px;
+    padding-block: 25px;
+  }
+
+  .logo-flex {
+    display: flex;
+    justify-content: center;
   }
 }
