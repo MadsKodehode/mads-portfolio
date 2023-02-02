@@ -127,6 +127,7 @@
   .exp-header {
     font-size: 48px;
     margin-top: 50px;
+    color: var(--text-dark);
   }
 
   .language-exp {
@@ -135,6 +136,7 @@
   .language {
     padding-block: 25px;
     font-size: 40px;
+    color: var(--link-text);
   }
   .front-exp {
     margin-top: 15px;
@@ -142,6 +144,7 @@
   .front-header {
     font-size: 40px;
     padding-block: 25px;
+    color: var(--link-text);
   }
 
   .exp-logo {
@@ -153,10 +156,72 @@
   .back-header {
     font-size: 40px;
     padding-block: 25px;
+    color: var(--link-text);
   }
 
   .logo-flex {
     display: flex;
     justify-content: center;
+  }
+
+  /* Languages end */
+
+  /* Projects */
+
+  .projects {
+    font-family: "Inter";
+    text-align: center;
+    height: 100vh;
+    background-image: url("../imgs/bg-img.svg");
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+  }
+
+  .project-header {
+    font-size: 48px;
+    margin-top: 50px;
+    color: var(--text-dark);
+  }
+
+  .category-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .category {
+    padding: 0 10px 0 10px;
+  }
+
+  .project-btn {
+    border: none;
+    font-size: 30px;
+    background: none;
+    color: var(--light-blue);
+  }
+  .project {
+    text-align: center;
+  }
+  .project-title {
+    font-size: 20px;
+    color: var(--text-dark);
+    padding-block: 20px;
+  }
+
+  .project-img {
+    max-width: 320px;
+    min-width: 100px;
+  }
+
+  .project-desc {
+    font-weight: bold;
+    padding-block: 30px;
+    width: 270px;
+    margin: auto;
+  }
+
+  .project-arrow {
+    font-size: 25px;
   }
 }

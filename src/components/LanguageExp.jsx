@@ -1,5 +1,5 @@
 import data from "../content/data.json";
-import { SiJavascript, IoLogoJavascript } from "react-icons/si";
+
 import JsLogo from "../imgs/logos_javascript.svg";
 import HtmlLogo from "../imgs/HTML.svg";
 import CssLogo from "../imgs/CSS.svg";
@@ -18,14 +18,14 @@ const LanguageExp = () => {
         <div className="front-exp">
           <h1 className="front-header">{data.språk.text2}</h1>
           <img className="exp-logo" src={HtmlLogo} alt="html"></img>
-          <img className="exp-logo" src={CssLogo} alt="html"></img>
-          <img className="exp-logo" src={ReactLogo} alt="html"></img>
+          <img className="exp-logo" src={CssLogo} alt="css"></img>
+          <img className="exp-logo" src={ReactLogo} alt="react"></img>
         </div>
         <div className="back-exp">
           <h1 className="back-header">{data.språk.text3}</h1>
           <div className="logo-flex">
-            <img className="exp-logo" src={ExpressLogo} alt="html"></img>
-            <img className="exp-logo" src={NodeLogo} alt="html"></img>
+            <img className="exp-logo" src={ExpressLogo} alt="express"></img>
+            <img className="exp-logo" src={NodeLogo} alt="node"></img>
           </div>
         </div>
       </section>
