@@ -1,0 +1,39 @@
+{
+  "links": {
+    "link1": "Projekter",
+    "link2": "Om meg"
+  },
+
+  "hero": {
+    "header": "<HALLAIS!/>",
+    "subheader": "MITT NAVN ER MADS",
+    "paragraph": "SOFTWARE UTVIKLER / 'WANNABE' FULLSTACK",
+    "footer": "La meg fortelle deg mer"
+  },
+
+  "språk": {
+    "header": "SPRÅK OG ERFARING",
+    "text1": "SPRÅK",
+    "text2": "FRONT-END",
+    "text3": "BACK-END"
+  },
+  "projekter": {
+    "header": "MINE PROJEKTER:",
+    "subheader1": "FRONTEND",
+    "subheader2": "BACK-END",
+    "title": "POKEDEX",
+    "desc": "Dette var en oppgave vi fikk på Kodehode for å hente data fra PokeApi og lage en PokeDex fra den dataen."
+  },
+
+  "om": {
+    "header": "OM MEG",
+    "subheader": "Mitt navn er Mads jeg er 22 år gammel og er født og oppvokst i Fyllingsdalen",
+    "body": "Design er noe jeg alltid har likt. Det begynte med at meg og noen venner holdt på med Youtube og trengte en designer som kunne lage introer, bannere, redigere videoer osv. Så jeg bestemte meg for å lære meg dette fordi det var noe som var dyrt å betale for på den tiden. Etter veldig mange google søk og Youtube tutorials endte jeg opp med veldig god kompetanse om design og drev på med dette som en hobby i mange år og lagde mye kult både for venner og andre youtubere.",
+    "footer": "Fast forward 7 år senere begynte jeg på kodehode for å lære meg mer om koding der jeg har hatt det utrolig gøy med masse nye ting og fikk blod på tann når jeg begynte med Javascript"
+  },
+
+  "footer": {
+    "takk": "TAKK FOR BESØKET!",
+    "tilbake": "TILBAKE TIL TOPPEN"
+  }
+}
