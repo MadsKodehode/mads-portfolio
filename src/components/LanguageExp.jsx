@@ -10,22 +10,26 @@ const LanguageExp = () => {
   return (
     <>
       <section className="languages">
-        <h1 className="exp-header">{data.språk.header}</h1>
-        <div className="language-exp">
-          <h1 className="language">{data.språk.text1}</h1>
-          <img src={JsLogo} alt="javascript"></img>
-        </div>
-        <div className="front-exp">
-          <h1 className="front-header">{data.språk.text2}</h1>
-          <img className="exp-logo" src={HtmlLogo} alt="html"></img>
-          <img className="exp-logo" src={CssLogo} alt="css"></img>
-          <img className="exp-logo" src={ReactLogo} alt="react"></img>
-        </div>
-        <div className="back-exp">
-          <h1 className="back-header">{data.språk.text3}</h1>
-          <div className="logo-flex">
-            <img className="exp-logo" src={ExpressLogo} alt="express"></img>
-            <img className="exp-logo" src={NodeLogo} alt="node"></img>
+        <div className="language-container">
+          <h1 className="exp-header">{data.språk.header}</h1>
+          <div className="language-exp">
+            <h1 className="language">{data.språk.text1}</h1>
+            <img src={JsLogo} alt="javascript"></img>
+          </div>
+          <div className="front-exp">
+            <h1 className="front-header">{data.språk.text2}</h1>
+            <div className="logo-flex">
+              <img className="exp-logo" src={HtmlLogo} alt="html"></img>
+              <img className="exp-logo" src={CssLogo} alt="css"></img>
+              <img className="exp-logo" src={ReactLogo} alt="react"></img>
+            </div>
+          </div>
+          <div className="back-exp">
+            <h1 className="back-header">{data.språk.text3}</h1>
+            <div className="logo-flex">
+              <img className="exp-logo" src={ExpressLogo} alt="express"></img>
+              <img className="exp-logo" src={NodeLogo} alt="node"></img>
+            </div>
           </div>
         </div>
       </section>

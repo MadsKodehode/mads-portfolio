@@ -310,4 +310,103 @@
   }
 
   /* About end */
+
+  /* Footer */
+
+  .footer {
+    height: 80px;
+    width: 100%;
+    background: var(--header-bg);
+    font-family: "Maven Pro";
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-svg-wrap {
+    width: 62.6px;
+    height: 66.6px;
+    transform: rotate(-15deg);
+  }
+
+  .logo-footer {
+    -webkit-filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .takk {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .tilbake {
+    font-size: 12px;
+  }
+
+  .footer-logo-faded {
+    width: 120px;
+    opacity: 0.2;
+    transform: rotate(35deg);
+    position: relative;
+    top: -25px;
+  }
+
+  .faded-logo-wrapper {
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    height: 80px;
+  }
+
+  .right-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .github-icon {
+    color: var(--link-text);
+    font-size: 25px;
+    position: relative;
+    z-index: 5;
+    height: 25px;
+  }
+  .footer-links {
+    color: var(--link-text);
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+    font-weight: 500;
+    position: relative;
+    z-index: 5;
+  }
+
+  .footer-links:hover {
+    cursor: pointer;
+    color: var(--link-text);
+    opacity: 0.6;
+  }
+  .link-wrap-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5px 0 5px;
+  }
+
+  /* Footer end */
 }
