@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //ColorPalette
 $main-bg: #fafdfe;
 $banner: #f3ffff;
@@ -24,13 +26,29 @@ $large: 64em;
 //1200px
 $xtralarge: 75em;
 
+//Breakpoints map
+$breakpoints: (
+  small: 30em,
+  medium: 48em,
+  large: 64em,
+  xtralarge: 75em,
+);
+
+//Media query mixin
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 @mixin background-img {
   background-image: url("../imgs/bg-img.svg");
   background-size: cover;
   background-position: center;
 }
 
-//Reusable flex function
+//Reusable flex mixin
 @mixin flex($content, $align, $direction: null) {
   display: flex;
   justify-content: $content;
