@@ -99,12 +99,20 @@
     @include mq(medium) {
       max-width: 38.25em;
     }
+
+    @include mq(large) {
+      max-width: none;
+    }
     .hero-header {
       font-size: 2.5rem;
       margin-bottom: 15px;
       color: $light-blue;
       @include mq(medium) {
         font-size: 3.5rem;
+      }
+
+      @include mq(large) {
+        font-size: 4.5em;
       }
     }
     .hero-subheader {
@@ -113,6 +121,10 @@
       color: $dark-gray;
       @include mq(medium) {
         font-size: 1.5em;
+      }
+
+      @include mq(large) {
+        font-size: 2em;
       }
     }
 
@@ -123,6 +135,10 @@
       font-size: 1em;
       @include mq(medium) {
         font-size: 1.25em;
+      }
+
+      @include mq(large) {
+        font-size: 1.7em;
       }
     }
   }
@@ -173,6 +189,10 @@
     @include mq(medium) {
       font-size: 3.5rem;
     }
+
+    @include mq(large) {
+      font-size: 4rem;
+    }
   }
   //Language flexbox container
   @include mq(medium) {
@@ -194,10 +214,17 @@
       align-items: center;
       gap: 15px;
     }
+
+    @include mq(large) {
+      width: 400px;
+    }
     .language {
       padding-block: 0.25em;
       font-size: 2rem;
       color: $blue-gray;
+      @include mq(large) {
+        font-size: 2.5rem;
+      }
     }
 
     img {
@@ -211,12 +238,18 @@
         font-size: 2rem;
         padding-block: 0.25em;
       }
+      @include mq(large) {
+        font-size: 2.5rem;
+      }
     }
     .back-header {
       padding-block: 0.25em;
       color: $blue-gray;
       @include mq(medium) {
         font-size: 2rem;
+      }
+      @include mq(large) {
+        font-size: 2.5rem;
       }
     }
   }
@@ -259,51 +292,114 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  .project-header {
-    color: $dark-gray;
-    font-size: 2.5rem;
-    margin: 50px 0 25px 0;
-  }
+    justify-content: space-between;
+    flex-direction: column;
 
-  .category-wrap {
-    @include flex(center, center);
-    min-width: 10em;
-    max-width: 20em;
-    margin: auto;
-
-    .category {
-      font-size: 2rem;
+    @include mq(medium) {
+      flex-direction: row;
+      justify-content: center;
     }
-    .project-btn {
+
+    @include mq(large) {
+      justify-content: space-between;
+    }
+  }
+
+  .projects-left {
+    display: flex;
+    flex-direction: column;
+
+    .project-header {
+      color: $dark-gray;
+      font-size: 2.5rem;
+      margin: 50px 0 25px 0;
+
+      @include mq(medium) {
+        font-size: 3rem;
+        text-align: left;
+        margin: 0 0 25px 0;
+        max-width: 25rem;
+      }
+
+      @include mq(large) {
+        max-width: none;
+      }
+    }
+
+    .category-list {
+      display: none;
+      list-style: none;
+      text-align: left;
+      @include mq(medium) {
+        display: block;
+      }
+
+      .category-item {
+        font-size: 2.5rem;
+      }
+    }
+
+    .category-wrap {
       @include flex(center, center);
-      border: none;
-      background: none;
+      min-width: 10em;
+      max-width: 20em;
+      margin: auto;
+      @include mq(medium) {
+        display: none;
+      }
+      .category {
+        font-size: 2rem;
+      }
+      .project-btn {
+        @include flex(center, center);
+        border: none;
+        background: none;
+        font-size: 2rem;
+        color: $cyan-light;
+      }
+    }
+  }
+
+  .projects-right {
+    display: flex;
+    flex-direction: column;
+
+    .project {
+      @include flex(center, center, column);
+      .project-title {
+        padding: 1.5em;
+
+        @include mq(large) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .project-img {
+        max-width: 17em;
+        @include mq(medium) {
+          max-width: 20em;
+        }
+
+        @include mq(large) {
+          max-width: 25em;
+        }
+      }
+
+      .project-desc {
+        padding: 1.5em;
+        font-weight: 700;
+
+        max-width: 20rem;
+
+        @include mq(large) {
+          max-width: 25rem;
+        }
+      }
+    }
+    .project-arrow {
       font-size: 2rem;
-      color: $cyan-light;
+      margin-top: 1em;
     }
-  }
-  .project {
-    @include flex(center, center, column);
-    .project-title {
-      padding: 1.5em;
-    }
-
-    .project-img {
-      max-width: 17em;
-    }
-
-    .project-desc {
-      padding: 1.5em;
-      font-weight: 700;
-
-      max-width: 20rem;
-    }
-  }
-  .project-arrow {
-    font-size: 2rem;
-    margin-top: 1em;
   }
 }
 /* Project styles end */
@@ -364,6 +460,11 @@
         max-width: 17rem;
         max-height: 17rem;
       }
+
+      @include mq(large) {
+        max-width: 20rem;
+        max-height: 20rem;
+      }
       .about-img {
         width: 25em;
       }
@@ -374,7 +475,9 @@
       min-width: 14rem;
       margin: 20px auto;
       padding-block: 0.75rem;
-
+      @include mq(large) {
+        min-width: 16rem;
+      }
       .contact {
         font-size: 0.875rem;
         background: $banner;
@@ -388,6 +491,10 @@
         &:hover {
           cursor: pointer;
           opacity: 0.6;
+        }
+
+        @include mq(large) {
+          font-size: 1rem;
         }
       }
       .readmore {
@@ -403,6 +510,9 @@
           cursor: pointer;
           opacity: 0.6;
         }
+        @include mq(large) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -415,13 +525,19 @@
       height: 29.5rem;
     }
 
+    @include mq(large) {
+      height: 31.5rem;
+    }
+
     .about-header-desktop {
       display: none;
       @include mq(medium) {
         display: block;
         font-size: 3.5rem;
+      }
 
-        /* margin: 50px 0 25px 0; */
+      @include mq(large) {
+        font-size: 4rem;
       }
     }
     .text-wrapper {
@@ -429,14 +545,16 @@
         font-weight: 500;
         padding-block: 1rem;
 
-        @include mq(medium) {
+        @include mq(large) {
+          font-size: 1.2rem;
         }
       }
 
       .about-body {
         font-weight: 300;
         font-size: 0.812rem;
-        @include mq(medium) {
+        @include mq(large) {
+          font-size: 1rem;
         }
       }
 
@@ -444,7 +562,8 @@
         font-weight: 600;
         font-size: 0.85rem;
         padding-block: 1rem;
-        @include mq(medium) {
+        @include mq(large) {
+          font-size: 1.1rem;
         }
       }
     }
