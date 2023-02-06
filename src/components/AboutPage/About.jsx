@@ -1,5 +1,5 @@
-import data from "../content/data.json";
-import MadsImg from "../imgs/MadsiTrappen.JPG";
+import data from "../../content/data.json";
+import MadsImg from "../../imgs/MadsiTrappen.JPG";
 const About = () => {
   return (
     <section className="about">

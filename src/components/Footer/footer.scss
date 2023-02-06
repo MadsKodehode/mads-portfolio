@@ -1,0 +1,81 @@
+.footer {
+  @include flex(space-around, center);
+  height: 5rem;
+  width: 100%;
+  background: $banner;
+  font-family: "Maven Pro";
+  overflow: hidden;
+  .left {
+    @include flex(center, center);
+    .footer-svg-wrap {
+      width: 62.6px;
+      height: 66.6px;
+      transform: rotate(-15deg);
+      display: inline-block;
+
+      .logo-footer {
+        -webkit-filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+        filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+      }
+    }
+    .footer-text {
+      text-align: center;
+      .takk {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .tilbake {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .right {
+    @include flex(center, center);
+    .right-wrapper {
+      @include flex(center, center, column);
+      position: absolute;
+
+      .github-icon {
+        height: 24px;
+        font-size: 1.5rem;
+        color: $blue-gray;
+        position: relative;
+        z-index: 2;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      .link-wrap-footer {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+
+        .footer-links {
+          padding: 0 0.5rem;
+          text-decoration: none;
+          color: $blue-gray;
+          position: relative;
+          z-index: 2;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .faded-logo-wrapper {
+      max-width: 150px;
+      min-width: 80px;
+
+      height: 80px;
+      .footer-logo-faded {
+        width: 150px;
+        opacity: 0.2;
+        transform: rotate(35deg);
+        position: relative;
+        z-index: 0;
+        top: -35px;
+      }
+    }
+  }
+}

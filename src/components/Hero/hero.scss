@@ -1,0 +1,107 @@
+.layout {
+  @include background-img;
+  height: 100vh;
+  margin-top: 3em;
+  font-family: "Inter";
+  font-weight: 600;
+  overflow: hidden;
+  display: flex;
+  .hero-container {
+    padding: 1em;
+    height: auto;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero {
+    height: 12.5em;
+    max-width: 21.25em;
+    margin: 3em 0;
+    text-align: center;
+    @include mq(medium) {
+      max-width: 38.25em;
+    }
+
+    @include mq(large) {
+      max-width: none;
+    }
+
+    .hero-header {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: $light-blue;
+      @include mq(medium) {
+        font-size: 3.5rem;
+      }
+
+      @include mq(large) {
+        font-size: 4.5em;
+      }
+
+      @include mq(xtralarge) {
+        font-size: 5em;
+      }
+    }
+    .hero-subheader {
+      font-size: 1.25em;
+      margin-bottom: 15px;
+      color: $dark-gray;
+      @include mq(medium) {
+        font-size: 1.5em;
+      }
+
+      @include mq(large) {
+        font-size: 2em;
+      }
+      @include mq(xtralarge) {
+        font-size: 2.25em;
+      }
+    }
+
+    .hero-paragraph {
+      margin-bottom: 15px;
+      color: $dark-gray;
+      opacity: 0.8;
+      font-size: 1em;
+      max-width: 200px;
+      margin: auto;
+      @include mq(medium) {
+        font-size: 1.25em;
+        max-width: none;
+      }
+
+      @include mq(large) {
+        font-size: 1.7em;
+      }
+      @include mq(xtralarge) {
+        font-size: 1.95em;
+      }
+    }
+  }
+
+  .arrow {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 50px;
+    color: $dark-gray;
+
+    @include mq(xtralarge) {
+      font-size: 1.5em;
+    }
+    .hero-footer {
+      padding-block: 0.5em;
+    }
+
+    svg {
+      font-size: 30px;
+      margin-top: 1rem;
+      @include mq(xtralarge) {
+        font-size: 40px;
+      }
+    }
+  }
+}

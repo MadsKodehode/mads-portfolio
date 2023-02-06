@@ -1,5 +1,5 @@
-import data from "../content/data.json";
-import PokedexImg from "../imgs/PokeDex.png";
+import data from "../../content/data.json";
+import PokedexImg from "../../imgs/PokeDex.png";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 const Projects = () => {

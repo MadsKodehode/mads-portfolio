@@ -1,0 +1,55 @@
+.header-light {
+  @include flex(center, center);
+  background: $banner;
+  box-shadow: 0px 0px 5px #999;
+  overflow: hidden;
+  height: 5em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+
+  .links {
+    @include flex(space-between, center);
+    min-width: 250px;
+    max-width: 300px;
+    height: 5em;
+    .link {
+      font-family: "Maven Pro";
+      font-weight: 500;
+      text-decoration: none;
+      color: $blue-gray;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      z-index: 2;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .logo-wrap {
+      @include flex(center, center);
+      width: 3.125em;
+      height: 5em;
+
+      .svg-wrap {
+        width: 62.6px;
+        height: 66.6px;
+        position: absolute;
+        transform: rotate(-15deg);
+
+        .logo-svg {
+          -webkit-filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+          filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+        }
+      }
+
+      .logo-faded {
+        width: 120px;
+        opacity: 0.2;
+        transform: rotate(35deg);
+      }
+    }
+  }
+}
