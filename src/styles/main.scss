@@ -1,0 +1,24 @@
+//Global styles
+@import "./global";
+//Mixins
+@import "./mixins";
+//Variables
+@import "./variables";
+
+//About component styles
+@import "../components/AboutPage/about";
+
+//Hero styles
+@import "../components/Hero/hero.scss";
+
+//Header styles
+@import "../components/Header/header.scss";
+
+//Language page styles
+@import "../components/LanguagePage/languageExp.scss";
+
+//Projects page styles
+@import "../components/ProjectsPage/projects.scss";
+
+//Footer styles
+@import "../components/Footer/footer.scss";

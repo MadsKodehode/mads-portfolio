@@ -1,0 +1,28 @@
+@use "sass:map";
+
+//Media query mixin
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin background-img {
+  background-image: url("../imgs/bg-img.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+//Reusable flex mixin
+@mixin flex($content, $align, $direction: null) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+
+  @if ($direction) {
+    flex-direction: $direction;
+  } @else {
+    $direction: null;
+  }
+}

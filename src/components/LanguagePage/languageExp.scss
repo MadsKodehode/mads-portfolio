@@ -1,0 +1,126 @@
+.languages {
+  @include background-img;
+  height: 100vh;
+  font-family: "Inter";
+  overflow: auto;
+  text-align: center;
+  display: flex;
+
+  .language-container {
+    padding: 1em;
+    height: auto;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .exp-header {
+    font-size: 2.5rem;
+    margin: 0px 0 25px 0;
+    color: $dark-gray;
+
+    @include mq(medium) {
+      font-size: 3.5rem;
+    }
+
+    @include mq(large) {
+      font-size: 4rem;
+    }
+
+    @include mq(xtralarge) {
+      font-size: 4.5rem;
+    }
+  }
+  //Language flexbox container
+  @include mq(medium) {
+    .language-flex {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .exp-col {
+    padding-block: 1em;
+
+    //Media query
+    @include mq(medium) {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    @include mq(large) {
+      width: 400px;
+    }
+
+    .language {
+      padding-block: 0.25em;
+      font-size: 2rem;
+      color: $blue-gray;
+      @include mq(large) {
+        font-size: 2.5rem;
+      }
+
+      @include mq(xtralarge) {
+        font-size: 3rem;
+      }
+    }
+
+    img {
+      min-width: 3em;
+      max-width: 4em;
+    }
+    .front-header {
+      padding-block: 0.5em;
+      color: $blue-gray;
+      @include mq(medium) {
+        font-size: 2rem;
+        padding-block: 0.25em;
+      }
+      @include mq(large) {
+        font-size: 2.5rem;
+      }
+      @include mq(xtralarge) {
+        font-size: 3rem;
+      }
+    }
+    .back-header {
+      padding-block: 0.25em;
+      color: $blue-gray;
+      @include mq(medium) {
+        font-size: 2rem;
+      }
+      @include mq(large) {
+        font-size: 2.5rem;
+      }
+      @include mq(xtralarge) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .logo-flex {
+    @include flex(space-around, center);
+    min-width: 17em;
+    max-width: 20em;
+    @include mq(medium) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .exp-logo {
+      min-width: 3em;
+      max-width: 4em;
+
+      @include mq(medium) {
+        min-width: 3em;
+        max-width: 6em;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import data from "../content/data.json";
+import data from "../../content/data.json";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 const Body = () => {
   return (

@@ -1,11 +1,11 @@
-import data from "../content/data.json";
+import data from "../../content/data.json";
 
-import JsLogo from "../imgs/logos_javascript.svg";
-import HtmlLogo from "../imgs/HTML.svg";
-import CssLogo from "../imgs/CSS.svg";
-import ReactLogo from "../imgs/REACT.svg";
-import ExpressLogo from "../imgs/Vector.svg";
-import NodeLogo from "../imgs/logos_nodejs.svg";
+import JsLogo from "../../imgs/logos_javascript.svg";
+import HtmlLogo from "../../imgs/HTML.svg";
+import CssLogo from "../../imgs/CSS.svg";
+import ReactLogo from "../../imgs/REACT.svg";
+import ExpressLogo from "../../imgs/Vector.svg";
+import NodeLogo from "../../imgs/logos_nodejs.svg";
 const LanguageExp = () => {
   return (
     <>

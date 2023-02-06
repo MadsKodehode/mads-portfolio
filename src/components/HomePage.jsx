@@ -1,10 +1,10 @@
-import Header from "./Header";
-import Body from "./Body";
+import Header from "./Header/Header";
+import Hero from "./Hero/Hero";
 const HomePage = () => {
   return (
     <>
       <Header></Header>
-      <Body></Body>
+      <Hero></Hero>
     </>
   );
 };

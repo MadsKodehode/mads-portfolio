@@ -1,5 +1,5 @@
-import VersionDefaultIcon from "../imgs/VersionDefaultIcon.svg";
-import data from "../content/data.json";
+import VersionDefaultIcon from "../../imgs/VersionDefaultIcon.svg";
+import data from "../../content/data.json";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 const Footer = () => {
