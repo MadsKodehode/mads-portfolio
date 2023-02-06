@@ -103,6 +103,7 @@
     @include mq(large) {
       max-width: none;
     }
+
     .hero-header {
       font-size: 2.5rem;
       margin-bottom: 15px;
@@ -113,6 +114,10 @@
 
       @include mq(large) {
         font-size: 4.5em;
+      }
+
+      @include mq(xtralarge) {
+        font-size: 5em;
       }
     }
     .hero-subheader {
@@ -126,6 +131,9 @@
       @include mq(large) {
         font-size: 2em;
       }
+      @include mq(xtralarge) {
+        font-size: 2.25em;
+      }
     }
 
     .hero-paragraph {
@@ -133,12 +141,18 @@
       color: $dark-gray;
       opacity: 0.8;
       font-size: 1em;
+      max-width: 200px;
+      margin: auto;
       @include mq(medium) {
         font-size: 1.25em;
+        max-width: none;
       }
 
       @include mq(large) {
         font-size: 1.7em;
+      }
+      @include mq(xtralarge) {
+        font-size: 1.95em;
       }
     }
   }
@@ -148,6 +162,10 @@
     font-size: 1.25rem;
     margin-top: 50px;
     color: $dark-gray;
+
+    @include mq(xtralarge) {
+      font-size: 1.5em;
+    }
     .hero-footer {
       padding-block: 0.5em;
     }
@@ -155,6 +173,9 @@
     svg {
       font-size: 30px;
       margin-top: 1rem;
+      @include mq(xtralarge) {
+        font-size: 40px;
+      }
     }
   }
 }
@@ -193,6 +214,10 @@
     @include mq(large) {
       font-size: 4rem;
     }
+
+    @include mq(xtralarge) {
+      font-size: 4.5rem;
+    }
   }
   //Language flexbox container
   @include mq(medium) {
@@ -218,12 +243,17 @@
     @include mq(large) {
       width: 400px;
     }
+
     .language {
       padding-block: 0.25em;
       font-size: 2rem;
       color: $blue-gray;
       @include mq(large) {
         font-size: 2.5rem;
+      }
+
+      @include mq(xtralarge) {
+        font-size: 3rem;
       }
     }
 
@@ -241,6 +271,9 @@
       @include mq(large) {
         font-size: 2.5rem;
       }
+      @include mq(xtralarge) {
+        font-size: 3rem;
+      }
     }
     .back-header {
       padding-block: 0.25em;
@@ -250,6 +283,9 @@
       }
       @include mq(large) {
         font-size: 2.5rem;
+      }
+      @include mq(xtralarge) {
+        font-size: 3rem;
       }
     }
   }
@@ -324,6 +360,10 @@
       @include mq(large) {
         max-width: none;
       }
+
+      @include mq(xtralarge) {
+        font-size: 4rem;
+      }
     }
 
     .category-list {
@@ -336,6 +376,12 @@
 
       .category-item {
         font-size: 2.5rem;
+        @include mq(large) {
+          font-size: 3rem;
+        }
+        @include mq(xtralarge) {
+          font-size: 3.5rem;
+        }
       }
     }
 
@@ -372,6 +418,10 @@
         @include mq(large) {
           font-size: 1.5rem;
         }
+
+        @include mq(xtralarge) {
+          font-size: 2rem;
+        }
       }
 
       .project-img {
@@ -383,6 +433,10 @@
         @include mq(large) {
           max-width: 25em;
         }
+
+        @include mq(xtralarge) {
+          max-width: 30em;
+        }
       }
 
       .project-desc {
@@ -393,6 +447,11 @@
 
         @include mq(large) {
           max-width: 25rem;
+        }
+
+        @include mq(xtralarge) {
+          max-width: 30rem;
+          font-size: 1.2rem;
         }
       }
     }
@@ -465,8 +524,17 @@
         max-width: 20rem;
         max-height: 20rem;
       }
+
+      @include mq(xtralarge) {
+        max-width: 25rem;
+        max-height: 25rem;
+      }
       .about-img {
         width: 25em;
+
+        @include mq(xtralarge) {
+          width: 35em;
+        }
       }
     }
     .about-btns {
@@ -477,6 +545,9 @@
       padding-block: 0.75rem;
       @include mq(large) {
         min-width: 16rem;
+      }
+      @include mq(xtralarge) {
+        min-width: 20rem;
       }
       .contact {
         font-size: 0.875rem;
@@ -496,6 +567,9 @@
         @include mq(large) {
           font-size: 1rem;
         }
+        @include mq(xtralarge) {
+          font-size: 1.5rem;
+        }
       }
       .readmore {
         font-size: 0.875rem;
@@ -513,6 +587,9 @@
         @include mq(large) {
           font-size: 1rem;
         }
+        @include mq(xtralarge) {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -528,6 +605,9 @@
     @include mq(large) {
       height: 31.5rem;
     }
+    @include mq(xtralarge) {
+      height: 35rem;
+    }
 
     .about-header-desktop {
       display: none;
@@ -539,6 +619,9 @@
       @include mq(large) {
         font-size: 4rem;
       }
+      @include mq(xtralarge) {
+        font-size: 4.5rem;
+      }
     }
     .text-wrapper {
       .about-subheader {
@@ -548,6 +631,9 @@
         @include mq(large) {
           font-size: 1.2rem;
         }
+        @include mq(xtralarge) {
+          font-size: 1.5rem;
+        }
       }
 
       .about-body {
@@ -555,6 +641,9 @@
         font-size: 0.812rem;
         @include mq(large) {
           font-size: 1rem;
+        }
+        @include mq(xtralarge) {
+          font-size: 1.2rem;
         }
       }
 
@@ -564,6 +653,9 @@
         padding-block: 1rem;
         @include mq(large) {
           font-size: 1.1rem;
+        }
+        @include mq(xtralarge) {
+          font-size: 1.3rem;
         }
       }
     }
