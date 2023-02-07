@@ -1,7 +1,7 @@
 /* About styles */
 .about {
   @include background-img;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   overflow: auto;
   font-family: "Inter";
