@@ -4,6 +4,7 @@ import LanguageExp from "./LanguagePage/LanguageExp";
 import Projects from "./ProjectsPage/Projects";
 import About from "./AboutPage/About";
 import Footer from "./Footer/Footer";
+import { useEffect } from "react";
 const HomePage = () => {
   return (
     <>

@@ -1,4 +1,6 @@
 .layout {
+  opacity: 0;
+  transition: opacity 1s ease-in;
   @include background-img;
   height: 100vh;
 

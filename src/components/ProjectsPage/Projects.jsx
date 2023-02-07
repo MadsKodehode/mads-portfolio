@@ -7,23 +7,35 @@ import backendModel from "../../content/backendModel.json";
 import BulletPoint from "../../imgs/BulletPoint.svg";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Projects = () => {
+  const projectsRef = useRef();
+  const [intersecting, setIsIntersecting] = useState();
+
+  useEffect(() => {
+    //Create new instance of observer
+    const observer = new IntersectionObserver((entries) => {
+      //Storing entry
+      const entry = entries[0];
+      setIsIntersecting(entry.isIntersecting);
+    });
+    //Observe element reference
+    observer.observe(projectsRef.current);
+  }, []);
+
   //Frontend active
   const [active1, setActive1] = useState(true);
   //Backend active
   const [active2, setActive2] = useState(false);
   //Fullstack active
   const [active3, setActive3] = useState(false);
+
   //Tracking index
   const [frontendIndex, setFrontendIndex] = useState(0);
-
-  console.log(frontendIndex);
-  const [fullstackIndex, setFullstackIndex] = useState(0);
   const [backendIndex, setBackendIndex] = useState(0);
-  const [value, setValue] = useState([]);
-  console.log(frontendIndex);
+  const [fullstackIndex, setFullstackIndex] = useState(0);
+
   //Frontend project
   const frontendProject = frontendModel[frontendIndex];
   const frontendProjectUrl = frontendModel[frontendIndex].image;
@@ -86,9 +98,6 @@ const Projects = () => {
     }
   };
 
-  const categoryArray = ["frontend", "backend", "fullstack"];
-
-  console.log(categoryArray);
   const browseRight = () => {
     if (active1) {
       setActive1(false);
@@ -129,9 +138,9 @@ const Projects = () => {
 
   return (
     <>
-      <section className="projects">
+      <section className={intersecting ? "projects show" : "projects"}>
         <div className="projects-container">
-          <div className="projects-left">
+          <div className="projects-left" ref={projectsRef}>
             <h1 className="project-header">{data.projekter.header}</h1>
             <ul className="category-list">
               <button

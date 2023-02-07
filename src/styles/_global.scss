@@ -10,6 +10,9 @@
   @include background-img;
   overflow-x: hidden;
   /* overflow-y: scroll; */
+  > .show {
+    opacity: 1;
+  }
 }
 
 ::-webkit-scrollbar {
