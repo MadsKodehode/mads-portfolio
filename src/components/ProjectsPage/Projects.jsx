@@ -1,6 +1,9 @@
+//Text content
 import data from "../../content/data.json";
+//Projects data
 import frontendModel from "../../content/frontendModel.json";
-import PokedexImg from "../../imgs/PokeDex.png";
+import fullstackModel from "../../content/fullstackModel.json";
+import backendModel from "../../content/backendModel.json";
 import BulletPoint from "../../imgs/BulletPoint.svg";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
@@ -14,15 +17,40 @@ const Projects = () => {
   //Fullstack active
   const [active3, setActive3] = useState(false);
   //Tracking index
-  const [index, setIndex] = useState(0);
+  const [frontendIndex, setFrontendIndex] = useState(0);
+  const [fullstackIndex, setFullstackIndex] = useState(0);
+  const [backendIndex, setBackendIndex] = useState(0);
   const [value, setValue] = useState([]);
 
-  const project = frontendModel[index];
-  const projectUrl = frontendModel[index].image;
+  //Frontend project
+  const frontendProject = frontendModel[frontendIndex];
+  const frontendProjectUrl = frontendModel[frontendIndex].image;
+
+  //Backend projects
+  const backendProject = backendModel[backendIndex];
+  const backendProjectUrl = backendModel[backendIndex].image;
+
+  //Fullstack project
+  const fullstackProject = fullstackModel[fullstackIndex];
+  const fullstackProjectUrl = fullstackModel[fullstackIndex].image;
+
   //Browse through one project at a time
   const browseProjects = () => {
-    if (index === frontendModel.length - 1) return setIndex(0);
-    setIndex((current) => current + 1);
+    if (active1) {
+      if (frontendIndex === frontendModel.length - 1)
+        return setFrontendIndex(0);
+
+      setFrontendIndex((current) => current + 1);
+    } else if (active2) {
+      if (backendIndex === backendModel.length - 1) return setBackendIndex(0);
+
+      setBackendIndex((current) => current + 1);
+    } else if (active3) {
+      if (fullstackIndex === fullstackModel.length - 1)
+        return setFullstackIndex(0);
+
+      setFullstackIndex((current) => current + 1);
+    }
   };
 
   //Toggle category function
@@ -95,7 +123,15 @@ const Projects = () => {
               <button className="project-btn">
                 <IoMdArrowDropleft></IoMdArrowDropleft>
               </button>
-              <h2 className="category">{data.projekter.kategori.frontend}</h2>
+              <h2 className="category">
+                {active1
+                  ? data.projekter.kategori.frontend
+                  : active2
+                  ? data.projekter.kategori.backend
+                  : active3
+                  ? data.projekter.kategori.fullstack
+                  : ""}
+              </h2>
               <button className="project-btn">
                 <IoMdArrowDropright></IoMdArrowDropright>
               </button>
@@ -103,13 +139,37 @@ const Projects = () => {
           </div>
           <div className="projects-right">
             <div className="project">
-              <h3 className="project-title">{project.title}</h3>
+              <h3 className="project-title">
+                {active1
+                  ? frontendProject.title
+                  : active2
+                  ? backendProject.title
+                  : active3
+                  ? fullstackProject.title
+                  : ""}
+              </h3>
               <img
                 className="project-img"
-                src={require(`../../imgs/${projectUrl}`)}
+                src={require(`../../imgs/${
+                  active1
+                    ? frontendProjectUrl
+                    : active2
+                    ? backendProjectUrl
+                    : active3
+                    ? fullstackProjectUrl
+                    : ""
+                }`)}
                 alt="pokedex"
               ></img>
-              <p className="project-desc">{project.desc}</p>
+              <p className="project-desc">
+                {active1
+                  ? frontendProject.desc
+                  : active2
+                  ? backendProject.desc
+                  : active3
+                  ? fullstackProject.desc
+                  : ""}
+              </p>
             </div>
             <div className="project-arrow">
               <HiOutlineArrowNarrowDown

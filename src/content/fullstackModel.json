@@ -2,6 +2,8 @@
   {
     "id": 1,
     "title": "NODEJS LOGIN",
-    "desc": "Ett lite projekt der jeg lagde en login form for å øve på fullstack ferdigheter"
+    "desc": "Ett lite projekt der jeg lagde en login form for å øve på fullstack ferdigheter",
+    "image": "LoginForm.png",
+    "category": "fullstack"
   }
 ]
