@@ -1,8 +1,11 @@
 /* About styles */
 .about {
+  opacity: 0;
+  transition: opacity 1s ease-in;
   @include background-img;
-  height: auto;
+
   width: 100vw;
+  min-height: 100vh;
   overflow: auto;
   font-family: "Inter";
   color: $dark-gray;
@@ -132,6 +135,7 @@
   .about-flex-right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     @include mq(medium) {
       padding: 2em;
       height: 29.5rem;

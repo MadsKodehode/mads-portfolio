@@ -1,5 +1,9 @@
 .languages {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+
   @include background-img;
+
   height: 100vh;
   font-family: "Inter";
   overflow: auto;
@@ -122,5 +126,11 @@
         max-width: 6em;
       }
     }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .languages {
+    transition: none;
   }
 }

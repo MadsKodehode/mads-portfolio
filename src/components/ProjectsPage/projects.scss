@@ -1,4 +1,6 @@
 .projects {
+  opacity: 0;
+  transition: opacity 1s ease-in;
   @include background-img;
   font-family: "Inter";
   color: $dark-gray;

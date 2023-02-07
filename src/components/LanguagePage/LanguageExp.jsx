@@ -6,13 +6,26 @@ import CssLogo from "../../imgs/CSS.svg";
 import ReactLogo from "../../imgs/REACT.svg";
 import ExpressLogo from "../../imgs/Vector.svg";
 import NodeLogo from "../../imgs/logos_nodejs.svg";
+import { useEffect, useRef, useState } from "react";
 const LanguageExp = () => {
+  const languageRef = useRef();
+  const [intersecting, setIsIntersecting] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsIntersecting(entry.isIntersecting);
+    });
+    //Observe element ref
+    observer.observe(languageRef.current);
+  }, []);
+
   return (
     <>
-      <section className="languages">
+      <section className={intersecting ? "languages show" : "languages"}>
         <div className="language-container">
           <h1 className="exp-header">{data.språk.header}</h1>
-          <div className="language-flex">
+          <div className="language-flex" ref={languageRef}>
             <div className="exp-col">
               <h1 className="language">{data.språk.text1}</h1>
               <img src={JsLogo} alt="javascript"></img>
