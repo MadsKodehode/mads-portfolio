@@ -17,13 +17,14 @@
     "text2": "FRONT-END",
     "text3": "BACK-END"
   },
+
   "projekter": {
     "header": "MINE PROJEKTER:",
-    "subheader1": "FRONTEND",
-    "subheader2": "BACK-END",
-    "subheader3": "FULLSTACK",
-    "title": "POKEDEX",
-    "desc": "Dette var en oppgave vi fikk på Kodehode for å hente data fra PokeApi og lage en PokeDex fra den dataen."
+    "kategori": {
+      "frontend": "FRONTEND",
+      "backend": "BACK-END",
+      "fullstack": "FULLSTACK"
+    }
   },
 
   "om": {

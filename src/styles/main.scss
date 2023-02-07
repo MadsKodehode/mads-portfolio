@@ -1,9 +1,10 @@
-//Global styles
-@import "./global";
 //Mixins
 @import "./mixins";
 //Variables
 @import "./variables";
+
+//Global styles
+@import "./global";
 
 //About component styles
 @import "../components/AboutPage/about";

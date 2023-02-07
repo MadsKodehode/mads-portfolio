@@ -59,14 +59,60 @@
       @include mq(medium) {
         display: block;
       }
-
-      .category-item {
+      .active {
         font-size: 2.5rem;
+        font-weight: 700;
+        background: none;
+        outline: none;
+        border: none;
+        display: block;
+        cursor: pointer;
+        color: $dark-gray;
+
         @include mq(large) {
           font-size: 3rem;
         }
         @include mq(xtralarge) {
           font-size: 3.5rem;
+        }
+        .item-span {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          img {
+            width: 20px;
+            display: block;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .category-btn {
+        font-size: 2rem;
+        font-weight: 700;
+        background: none;
+        outline: none;
+        border: none;
+        display: block;
+        cursor: pointer;
+        color: $cyan-light;
+        @include mq(large) {
+          font-size: 2.5rem;
+        }
+        @include mq(xtralarge) {
+          font-size: 3rem;
+        }
+
+        .item-span {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          img {
+            width: 25px;
+            display: none;
+          }
         }
       }
     }
@@ -98,6 +144,12 @@
 
     .project {
       @include flex(center, center, column);
+      height: 320px;
+      width: 280px;
+      @include mq(medium) {
+        height: 500px;
+        width: 400px;
+      }
       .project-title {
         padding: 1.5em;
 
@@ -144,6 +196,7 @@
     .project-arrow {
       font-size: 2rem;
       margin-top: 1em;
+      cursor: pointer;
     }
   }
 }
