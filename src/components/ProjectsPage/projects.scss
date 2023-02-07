@@ -134,6 +134,10 @@
         background: none;
         font-size: 2rem;
         color: $cyan-light;
+        cursor: pointer;
+        &:active {
+          opacity: 0.5;
+        }
       }
     }
   }
