@@ -18,10 +18,12 @@ const Projects = () => {
   const [active3, setActive3] = useState(false);
   //Tracking index
   const [frontendIndex, setFrontendIndex] = useState(0);
+
+  console.log(frontendIndex);
   const [fullstackIndex, setFullstackIndex] = useState(0);
   const [backendIndex, setBackendIndex] = useState(0);
   const [value, setValue] = useState([]);
-
+  console.log(frontendIndex);
   //Frontend project
   const frontendProject = frontendModel[frontendIndex];
   const frontendProjectUrl = frontendModel[frontendIndex].image;
@@ -84,6 +86,47 @@ const Projects = () => {
     }
   };
 
+  const categoryArray = ["frontend", "backend", "fullstack"];
+
+  console.log(categoryArray);
+  const browseRight = () => {
+    if (active1) {
+      setActive1(false);
+      setActive3(false);
+
+      setActive2(true);
+    } else if (active2) {
+      setActive1(false);
+      setActive2(false);
+
+      setActive3(true);
+    } else if (active3) {
+      setActive2(false);
+      setActive3(false);
+
+      setActive1(true);
+    }
+  };
+
+  const browseLeft = () => {
+    if (active1) {
+      setActive1(false);
+      setActive2(false);
+
+      setActive3(true);
+    } else if (active2) {
+      setActive2(false);
+      setActive3(false);
+
+      setActive1(true);
+    } else if (active3) {
+      setActive3(false);
+      setActive1(false);
+
+      setActive2(true);
+    }
+  };
+
   return (
     <>
       <section className="projects">
@@ -121,7 +164,7 @@ const Projects = () => {
             </ul>
             <div className="category-wrap">
               <button className="project-btn">
-                <IoMdArrowDropleft></IoMdArrowDropleft>
+                <IoMdArrowDropleft onClick={browseLeft}></IoMdArrowDropleft>
               </button>
               <h2 className="category">
                 {active1
@@ -133,7 +176,7 @@ const Projects = () => {
                   : ""}
               </h2>
               <button className="project-btn">
-                <IoMdArrowDropright></IoMdArrowDropright>
+                <IoMdArrowDropright onClick={browseRight}></IoMdArrowDropright>
               </button>
             </div>
           </div>
