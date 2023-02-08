@@ -16,7 +16,7 @@ const About = () => {
     observer.observe(aboutRef.current);
   }, []);
   return (
-    <section className={intersecting ? "about show" : "about"}>
+    <section id="om" className={intersecting ? "about show" : "about"}>
       <div className="about-container">
         <h1 className="about-header">{data.om.header}</h1>
         <div className="about-flex-left" ref={aboutRef}>

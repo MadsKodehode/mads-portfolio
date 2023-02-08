@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header-light">
       <div className="links">
-        <Link className="link" to="/projekter">
+        <Link className="link" to="#projekter">
           Projekter
         </Link>
         <div className="logo-wrap">
@@ -29,7 +29,7 @@ const Header = () => {
           </div>
           <img className="logo-faded" src={VersionDefaultIcon} alt="logo"></img>
         </div>
-        <Link className="link" to="/om">
+        <Link className="link" to="#om">
           Om meg
         </Link>
       </div>

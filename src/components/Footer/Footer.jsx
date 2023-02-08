@@ -27,7 +27,9 @@ const Footer = () => {
         </div>
         <div className="footer-text">
           <h1 className="takk">{data.footer.takk}</h1>
-          <p className="tilbake">{data.footer.tilbake}</p>
+          <Link to="/" className="tilbake">
+            {data.footer.tilbake}
+          </Link>
         </div>
       </div>
       <div className="right">
@@ -42,10 +44,10 @@ const Footer = () => {
           </a>
 
           <div className="link-wrap-footer">
-            <Link className="footer-links" to="/projekter">
+            <Link className="footer-links" to="#projekter">
               {data.links.link1}
             </Link>
-            <Link className="footer-links" to="/om">
+            <Link className="footer-links" to="#om">
               {data.links.link2}
             </Link>
           </div>

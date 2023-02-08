@@ -70,6 +70,7 @@
         display: block;
         cursor: pointer;
         color: $dark-gray;
+        transition: all 0.5s ease;
 
         @include mq(large) {
           font-size: 3rem;
@@ -152,6 +153,8 @@
       @include flex(center, center, column);
       height: 320px;
       width: 280px;
+      transition: all 1.5s ease-in-out;
+
       @include mq(medium) {
         height: 500px;
         width: 400px;
@@ -170,6 +173,7 @@
 
       .project-img {
         max-width: 17em;
+
         @include mq(medium) {
           max-width: 20em;
         }
