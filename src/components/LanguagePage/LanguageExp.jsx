@@ -22,7 +22,10 @@ const LanguageExp = () => {
 
   return (
     <>
-      <section className={intersecting ? "languages show" : "languages"}>
+      <section
+        id="språk"
+        className={intersecting ? "languages show" : "languages"}
+      >
         <div className="language-container">
           <h1 className="exp-header">{data.språk.header}</h1>
           <div className="language-flex" ref={languageRef}>

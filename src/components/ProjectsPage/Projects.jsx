@@ -138,7 +138,10 @@ const Projects = () => {
 
   return (
     <>
-      <section className={intersecting ? "projects show" : "projects"}>
+      <section
+        id="projekter"
+        className={intersecting ? "projects show" : "projects"}
+      >
         <div className="projects-container">
           <div className="projects-left" ref={projectsRef}>
             <h1 className="project-header">{data.projekter.header}</h1>
