@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 const HomePage = () => {
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (location.hash) {
