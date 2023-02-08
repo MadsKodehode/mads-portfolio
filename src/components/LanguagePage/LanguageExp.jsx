@@ -23,7 +23,7 @@ const LanguageExp = () => {
   return (
     <>
       <section
-        id="språk"
+        id="erfaring"
         className={intersecting ? "languages show" : "languages"}
       >
         <div className="language-container">

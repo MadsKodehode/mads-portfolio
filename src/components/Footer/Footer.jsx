@@ -44,11 +44,17 @@ const Footer = () => {
           </a>
 
           <div className="link-wrap-footer">
-            <Link className="footer-links" to="#projekter">
-              {data.links.link1}
+            <Link className="footer-links" to="#erfaring">
+              {data.links["footer-links"].link1}
             </Link>
-            <Link className="footer-links" to="#om">
-              {data.links.link2}
+            <Link className="footer-links" to="#kontakt">
+              {data.links["footer-links"].link2}
+            </Link>
+            <Link className="footer-links" to="#projekter">
+              {data.links["footer-links"].link3}
+            </Link>
+            <Link className="footer-links" to="#lesmer">
+              {data.links["footer-links"].link4}
             </Link>
           </div>
         </div>

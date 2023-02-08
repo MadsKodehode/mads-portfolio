@@ -1,7 +1,13 @@
 {
   "links": {
     "link1": "Projekter",
-    "link2": "Om meg"
+    "link2": "Om meg",
+    "footer-links": {
+      "link1": "Erfaringer",
+      "link2": "Kontakt",
+      "link3": "Projekter",
+      "link4": "Les mer"
+    }
   },
 
   "hero": {

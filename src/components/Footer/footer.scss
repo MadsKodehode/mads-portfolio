@@ -6,6 +6,7 @@
   background: $banner;
   font-family: "Maven Pro";
   overflow: hidden;
+
   .left {
     @include flex(center, center);
     .footer-svg-wrap {
@@ -27,6 +28,12 @@
       }
       .tilbake {
         font-size: 0.75rem;
+        text-decoration: none;
+        color: $dark-gray;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -42,6 +49,9 @@
         color: $blue-gray;
         position: relative;
         z-index: 2;
+        @include mq(xtralarge) {
+          font-size: 2rem;
+        }
         &:hover {
           opacity: 0.6;
         }
@@ -51,7 +61,10 @@
         @include flex(center, center);
         flex-wrap: wrap;
         font-size: 0.75rem;
-
+        margin-top: 10px;
+        @include mq(xtralarge) {
+          font-size: 1rem;
+        }
         .footer-links {
           padding: 0 0.5rem;
           text-decoration: none;
