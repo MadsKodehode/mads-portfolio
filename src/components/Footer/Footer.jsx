@@ -53,9 +53,6 @@ const Footer = () => {
             <Link className="footer-links" to="#projekter">
               {data.links["footer-links"].link3}
             </Link>
-            <Link className="footer-links" to="#lesmer">
-              {data.links["footer-links"].link4}
-            </Link>
           </div>
         </div>
         <div className="faded-logo-wrapper">

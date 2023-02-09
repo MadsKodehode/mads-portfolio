@@ -40,7 +40,6 @@ const HomePage = () => {
       <LanguageExp></LanguageExp>
       <Projects></Projects>
       <About></About>
-
       <Footer></Footer>
     </>
   );
