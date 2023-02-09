@@ -201,21 +201,36 @@ const Projects = () => {
                   ? backendProject.title
                   : active3
                   ? fullstackProject.title
-                  : ""}
+                  : null}
               </h3>
-              <img
-                className="project-img"
-                src={require(`../../imgs/${
+              <a
+                href={
                   active1
-                    ? frontendProjectUrl
+                    ? frontendProject.repoUrl
                     : active2
-                    ? backendProjectUrl
+                    ? backendProject.repoUrl
                     : active3
-                    ? fullstackProjectUrl
-                    : ""
-                }`)}
-                alt="pokedex"
-              ></img>
+                    ? fullstackProject.repoUrl
+                    : null
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <img
+                  className="project-img"
+                  src={require(`../../imgs/${
+                    active1
+                      ? frontendProjectUrl
+                      : active2
+                      ? backendProjectUrl
+                      : active3
+                      ? fullstackProjectUrl
+                      : ""
+                  }`)}
+                  alt="pokedex"
+                ></img>
+              </a>
               <p className="project-desc">
                 {active1
                   ? frontendProject.desc

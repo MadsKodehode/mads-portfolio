@@ -1,7 +1,8 @@
 .layout {
-  opacity: 0;
-  transition: opacity 1s ease-in;
   @include background-img;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+
   height: 100vh;
 
   font-family: "Inter";
@@ -35,7 +36,8 @@
     .hero-header {
       font-size: 2.5rem;
       margin-bottom: 15px;
-      color: $light-blue;
+      color: $header;
+      text-shadow: 0px 1px 2px;
       @include mq(medium) {
         font-size: 3.5rem;
       }
@@ -51,7 +53,9 @@
     .hero-subheader {
       font-size: 1.25em;
       margin-bottom: 15px;
-      color: $dark-gray;
+      color: $dark;
+      text-shadow: 0px 1px 2px;
+      font-weight: 500;
       @include mq(medium) {
         font-size: 1.5em;
       }
@@ -66,11 +70,13 @@
 
     .hero-paragraph {
       margin-bottom: 15px;
-      color: $dark-gray;
+      color: $subheader;
       opacity: 0.8;
       font-size: 1em;
       max-width: 200px;
       margin: auto;
+      text-shadow: 0px 0px 2px;
+      font-weight: 100;
       @include mq(medium) {
         font-size: 1.25em;
         max-width: none;
@@ -89,7 +95,7 @@
     text-align: center;
     font-size: 1.25rem;
     margin-top: 50px;
-    color: $dark-gray;
+    color: $gray;
 
     @include mq(xtralarge) {
       font-size: 1.5em;

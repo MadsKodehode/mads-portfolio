@@ -18,7 +18,7 @@
       font-family: "Maven Pro";
       font-weight: 500;
       text-decoration: none;
-      color: $blue-gray;
+      color: $link;
       transition: all 0.2s ease-in-out;
       position: relative;
       z-index: 2;
@@ -40,8 +40,8 @@
         transform: rotate(-15deg);
 
         .logo-svg {
-          -webkit-filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
-          filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+          -webkit-filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.28));
+          filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.28));
         }
       }
 
@@ -49,6 +49,7 @@
         width: 120px;
         opacity: 0.2;
         transform: rotate(35deg);
+        z-index: -1;
       }
     }
   }

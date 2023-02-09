@@ -1,9 +1,9 @@
 .projects {
   opacity: 0;
-  transition: opacity 1s ease-in;
-  @include background-img;
+  transition: opacity 0.5s ease-in;
+
   font-family: "Inter";
-  color: $dark-gray;
+  color: $gray;
   height: 100vh;
   overflow: auto;
   text-align: center;
@@ -34,9 +34,10 @@
     flex-direction: column;
 
     .project-header {
-      color: $dark-gray;
+      color: $header;
       font-size: 2.5rem;
       margin: 50px 0 25px 0;
+      text-shadow: 0px 1px 2px;
 
       @include mq(medium) {
         font-size: 3rem;
@@ -58,6 +59,7 @@
       display: none;
       list-style: none;
       text-align: left;
+
       @include mq(medium) {
         display: block;
       }
@@ -69,8 +71,9 @@
         border: none;
         display: block;
         cursor: pointer;
-        color: $dark-gray;
+        color: $gray;
         transition: all 0.5s ease;
+        text-shadow: 0px 1px 2px;
 
         @include mq(large) {
           font-size: 3rem;
@@ -99,7 +102,7 @@
         border: none;
         display: block;
         cursor: pointer;
-        color: $cyan-light;
+        color: $inactive;
         @include mq(large) {
           font-size: 2.5rem;
         }
@@ -111,6 +114,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          text-shadow: 0px 1px 2px;
 
           img {
             width: 25px;
@@ -130,13 +134,14 @@
       }
       .category {
         font-size: 2rem;
+        text-shadow: 0px 1px 2px;
       }
       .project-btn {
         @include flex(center, center);
         border: none;
         background: none;
         font-size: 2rem;
-        color: $cyan-light;
+        color: $inactive;
         cursor: pointer;
         &:active {
           opacity: 0.5;
@@ -153,15 +158,18 @@
       @include flex(center, center, column);
       height: 320px;
       width: 280px;
-      transition: all 1.5s ease-in-out;
 
       @include mq(medium) {
         height: 500px;
         width: 400px;
       }
+      @include mq(xtralarge) {
+        width: 480px;
+      }
+
       .project-title {
         padding: 1.5em;
-
+        text-shadow: 0px 1px 2px;
         @include mq(large) {
           font-size: 1.5rem;
         }
@@ -170,20 +178,21 @@
           font-size: 2rem;
         }
       }
+      .project-link {
+        .project-img {
+          max-width: 17em;
 
-      .project-img {
-        max-width: 17em;
+          @include mq(medium) {
+            max-width: 20em;
+          }
 
-        @include mq(medium) {
-          max-width: 20em;
-        }
+          @include mq(large) {
+            max-width: 25em;
+          }
 
-        @include mq(large) {
-          max-width: 25em;
-        }
-
-        @include mq(xtralarge) {
-          max-width: 30em;
+          @include mq(xtralarge) {
+            max-width: 30em;
+          }
         }
       }
 
@@ -192,6 +201,7 @@
         font-weight: 700;
 
         max-width: 20rem;
+        text-shadow: 0px 1px 1px;
 
         @include mq(large) {
           max-width: 25rem;
