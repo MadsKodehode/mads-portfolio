@@ -4,6 +4,7 @@
     "title": "NODEJS LOGIN",
     "desc": "Ett lite projekt der jeg lagde en login form for å øve på fullstack ferdigheter",
     "image": "LoginForm.png",
-    "category": "fullstack"
+    "category": "fullstack",
+    "repoUrl": "https://github.com/MadsKodehode/nodejs-express-login"
   }
 ]

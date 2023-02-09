@@ -16,8 +16,8 @@
       display: inline-block;
 
       .logo-footer {
-        -webkit-filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
-        filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.5));
+        -webkit-filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.28));
+        filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.28));
       }
     }
     .footer-text {
@@ -29,7 +29,7 @@
       .tilbake {
         font-size: 0.75rem;
         text-decoration: none;
-        color: $dark-gray;
+        color: $gray;
 
         &:hover {
           opacity: 0.6;
@@ -46,7 +46,7 @@
       .github-icon {
         height: 24px;
         font-size: 1.5rem;
-        color: $blue-gray;
+        color: $link;
         position: relative;
         z-index: 2;
         @include mq(xtralarge) {
@@ -68,7 +68,7 @@
         .footer-links {
           padding: 0 0.5rem;
           text-decoration: none;
-          color: $blue-gray;
+          color: $link;
           position: relative;
           z-index: 2;
           &:hover {

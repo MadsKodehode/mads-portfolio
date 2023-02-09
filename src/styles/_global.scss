@@ -7,7 +7,7 @@
 .App {
   width: 100%;
   height: auto;
-  @include background-img;
+  background: $background;
   overflow-x: hidden;
   /* overflow-y: scroll; */
   > .show {
