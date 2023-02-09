@@ -1,37 +1,23 @@
 .header-light {
   @include flex(center, center);
   background: $banner;
-  box-shadow: 0px 0px 5px #999;
+  border-bottom: 1px solid #dddbf1;
   overflow: hidden;
-  height: 5em;
-  position: sticky;
+  height: 3.5em;
+  position: relative;
   width: 100%;
   top: 0;
   z-index: 10;
 
   .links {
     @include flex(space-between, center);
-    min-width: 250px;
-    max-width: 300px;
-    height: 5em;
-    .link {
-      font-family: "Maven Pro";
-      font-weight: 500;
-      text-decoration: none;
-      color: $link;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-      z-index: 2;
 
-      &:hover {
-        opacity: 0.6;
-      }
-    }
+    height: 3.5em;
 
     .logo-wrap {
       @include flex(center, center);
       width: 3.125em;
-      height: 5em;
+      height: 3.5em;
 
       .svg-wrap {
         width: 62.6px;
@@ -46,11 +32,19 @@
       }
 
       .logo-faded {
-        width: 120px;
+        width: 100px;
         opacity: 0.2;
         transform: rotate(35deg);
         z-index: -1;
       }
     }
   }
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  transition: all 0.5s ease;
 }
