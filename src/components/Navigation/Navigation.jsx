@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  const [active, setActive] = useState();
   return (
     <nav className="navigation">
       <div className="clip-bg">
@@ -21,7 +23,7 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            <Link className="link" to="#kontakt">
+            <Link className="link" to="kontakt">
               Kontakt
             </Link>
           </li>

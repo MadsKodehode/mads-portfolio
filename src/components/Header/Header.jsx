@@ -6,6 +6,33 @@ const Header = () => {
     <header>
       <div className="header-light">
         <div className="links">
+          <div className="abstract-wrap">
+            <svg
+              className="abstract"
+              width="1002"
+              height="72"
+              viewBox="0 0 1002 72"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M335.059 63.1988L371.79 54H889.001L875.599 62.5644H378.242L340.519 71.7632H70.0005L83.4024 63.1988H335.059Z"
+                fill="#BABDD6"
+              />
+              <path
+                d="M553.942 46.5644L517.211 55.7632L0 55.7632L13.4018 47.1989L510.758 47.1988L548.482 38L791.001 38L805.598 46.5644L553.942 46.5644Z"
+                fill="#BABDD6"
+              />
+              <path
+                d="M632.677 8.2472L595.632 17.1053L74.0007 17.1053L87.5171 8.85813L589.124 8.8581L627.17 0L874.502 1.03353e-06L886.484 8.24718L632.677 8.2472Z"
+                fill="#BABDD6"
+              />
+              <path
+                d="M734.676 25.2472L697.632 34.1053L176 34.1054L189.516 25.8582L691.124 25.8581L729.17 17L1002 17L988.484 25.2472L734.676 25.2472Z"
+                fill="#BABDD6"
+              />
+            </svg>
+          </div>
           <div className="logo-wrap">
             <div className="svg-wrap">
               <svg

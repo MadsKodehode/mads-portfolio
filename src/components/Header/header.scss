@@ -13,6 +13,24 @@
     @include flex(space-between, center);
 
     height: 3.5em;
+    .abstract-wrap {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      z-index: -1;
+      .abstract {
+        position: relative;
+        fill-opacity: 1;
+        z-index: -3;
+        height: 46px;
+        filter: drop-shadow(0px 0px 2px #e8e9f3);
+        animation-name: shadowFade;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        /* filter: drop-shadow(0px 0px 1px black); */
+      }
+    }
 
     .logo-wrap {
       @include flex(center, center);
@@ -33,7 +51,7 @@
 
       .logo-faded {
         width: 100px;
-        opacity: 0.2;
+        opacity: 1;
         transform: rotate(35deg);
         z-index: -1;
       }
@@ -47,4 +65,19 @@ header {
   top: 0;
   width: 100vw;
   transition: all 0.5s ease;
+}
+
+@keyframes shadowFade {
+  0% {
+    filter: drop-shadow(0px 0px 2px #e8e9f3);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 2px #98a0fc);
+  }
+  80% {
+    filter: drop-shadow(0px 0px 2px #c2c6f8);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 2px #e8e9f3);
+  }
 }

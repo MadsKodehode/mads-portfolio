@@ -6,8 +6,8 @@ import About from "./AboutPage/About";
 import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Navigation from "./Navigation/Navigation";
 
+import Contact from "./Contact/Contact";
 const HomePage = () => {
   const location = useLocation();
   let prevScroll = window.pageYOffset;
@@ -36,11 +36,11 @@ const HomePage = () => {
   return (
     <>
       <Header></Header>
-
       <Hero></Hero>
       <LanguageExp></LanguageExp>
       <Projects></Projects>
       <About></About>
+
       <Footer></Footer>
     </>
   );

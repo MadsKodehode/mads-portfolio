@@ -47,7 +47,7 @@ const Footer = () => {
             <Link className="footer-links" to="#erfaring">
               {data.links["footer-links"].link1}
             </Link>
-            <Link className="footer-links" to="#kontakt">
+            <Link className="footer-links" to="kontakt">
               {data.links["footer-links"].link2}
             </Link>
             <Link className="footer-links" to="#projekter">

@@ -1,6 +1,7 @@
 import data from "../../content/data.json";
 import MadsImg from "../../imgs/MadsiTrappen.JPG";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 const About = () => {
   const aboutRef = useRef();
   const [intersecting, setIsIntersecting] = useState();
@@ -24,8 +25,9 @@ const About = () => {
             <img className="about-img" src={MadsImg} alt="mads"></img>
           </div>
           <div className="about-btns">
-            <button className="contact">KONTAKT</button>
-            <button className="readmore">LES MER</button>
+            <Link className="contact" to="kontakt">
+              KONTAKT MEG
+            </Link>
           </div>
         </div>
         <div className="about-flex-right">
