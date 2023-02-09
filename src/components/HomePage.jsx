@@ -6,9 +6,22 @@ import About from "./AboutPage/About";
 import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Navigation from "./Navigation/Navigation";
+
 const HomePage = () => {
   const location = useLocation();
+  let prevScroll = window.pageYOffset;
 
+  window.onscroll = () => {
+    let currentScroll = window.pageYOffset;
+    if (prevScroll > currentScroll) {
+      document.querySelector("header").style.top = "0";
+    } else {
+      document.querySelector("header").style.top = "-56px";
+    }
+
+    prevScroll = currentScroll;
+  };
   useEffect(() => {
     if (location.hash) {
       let element = document.getElementById(location.hash.slice(1));
@@ -23,6 +36,7 @@ const HomePage = () => {
   return (
     <>
       <Header></Header>
+
       <Hero></Hero>
       <LanguageExp></LanguageExp>
       <Projects></Projects>
