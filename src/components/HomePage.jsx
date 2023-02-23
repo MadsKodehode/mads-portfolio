@@ -7,7 +7,6 @@ import Footer from "./Footer/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Contact from "./Contact/Contact";
 const HomePage = () => {
   const location = useLocation();
   let prevScroll = window.pageYOffset;
