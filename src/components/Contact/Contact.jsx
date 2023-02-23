@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { Outlet } from "react-router-dom";
+
 const Contact = () => {
   const [intersecting, setIsIntersecting] = useState();
 
@@ -34,7 +34,7 @@ const Contact = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      const entry2 = entries[1];
+
       setIsIntersecting(entry.isIntersecting);
     });
     if (form.current) {
